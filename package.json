@@ -1,0 +1,37 @@
+{
+  "name": "angulartics-chartbeat",
+  "version": "0.1.0",
+  "description": "Chartbeat plugin for Angulartics",
+  "keywords": [
+    "chartbeat",
+    "analytics",
+    "plugin",
+    "angular",
+    "angulartics"
+  ],
+  "author": "Sergio Acosa <acosta.checho@simian.co> (https://github.com/chechoacosta)",
+  "contributors": [
+    "Tim Elfelt <timelf123@gmail.com> (https://github.com/timelf123)",
+    "Luis Farzati <lfarzati@gmail.com> (https://github.com/luisfarzati)"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-chartbeat.js --compress --source-map dist/angulartics-chartbeat.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-chartbeat.min.js.map -o dist/angulartics-chartbeat.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angulartics/angulartics-chartbeat"
+  },
+  "bugs": {
+    "url": "https://github.com/angulartics/angulartics-chartbeat/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angulartics": "~0.18.0"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.23"
+  }
+}
